@@ -1,0 +1,24 @@
+---
+name: add-project
+description: index.html の施工実績セクションに、一貫したフォーマットで新しい実績カードを追加するスキル
+user-invocable: true
+---
+
+# 施工実績カード生成スキル
+
+ユーザーから実績情報を受け取ったら、`index.html` の `<div id="projects-grid">` 内に新しいカードを追加してください。
+
+## マークアップテンプレート
+```html
+<article class="project-card" data-category="{category_en}">
+  <div class="project-card-thumb">
+    <img src="{image_path}" alt="{project_name}の外観写真" loading="lazy" width="600" height="400">
+    <span class="category-badge">{category_jp}</span>
+  </div>
+  <div class="project-card-body">
+    <span class="project-year">{year}年 竣工</span>
+    <h3 class="project-title">{project_name}</h3>
+    <p class="project-desc">{description}</p>
+  </div>
+</article>
+```
